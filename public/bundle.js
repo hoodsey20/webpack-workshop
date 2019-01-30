@@ -96,11 +96,28 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Greeter", function() { return Greeter; });
-class Greeter {
-    greet(greeting, object) {
-        return `${greeting}, ${object}!!!`;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Greeter =
+/*#__PURE__*/
+function () {
+  function Greeter() {
+    _classCallCheck(this, Greeter);
+  }
+
+  _createClass(Greeter, [{
+    key: "greet",
+    value: function greet(greeting, object) {
+      return "".concat(greeting, ", ").concat(object, "!!!");
     }
-}
+  }]);
+
+  return Greeter;
+}();
 
 /***/ }),
 
@@ -115,13 +132,9 @@ class Greeter {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _greeter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greeter */ "./src/greeter.js");
 
-
-const greeter = new _greeter__WEBPACK_IMPORTED_MODULE_0__["Greeter"]();
-
-
-const message = greeter.greet('Hello', 'Webpacker');
-console.log('TCL: message', message)
-
+var greeter = new _greeter__WEBPACK_IMPORTED_MODULE_0__["Greeter"]();
+var message = greeter.greet('Hello', 'Webpacker');
+console.log('TCL: message', message);
 
 /***/ })
 
