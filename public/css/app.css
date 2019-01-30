@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: o;
+  background-color: royalblue;
+  color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: monospace; }
+
+.title {
+  font-size: 42px; }
+
+.logo {
+  max-width: 300px; }
+
+
+/*# sourceMappingURL=app.css.map*/
