@@ -19,7 +19,31 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
-            }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader', 
+                    {
+                        loader: 'css-loader', 
+                        options: {
+                            modules: true
+                        }
+                    },
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1000,
+                        name: '[name].[ext]',
+                        outputPath: 'img/'
+                    }
+                }
+            },
         ]
     }
 }
