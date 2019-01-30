@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack",
+    "build": "webpack --mode=production"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "@webpack-cli/init": "^0.1.3"
+    "@webpack-cli/init": "^0.1.3",
+    "jquery": "^3.3.1"
   }
 }
