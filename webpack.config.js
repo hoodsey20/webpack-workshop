@@ -1,12 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
-		app: './src/index.js',
+        index: './src/index.js',
+        inner: './src/inner.js'
 	},
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
     },
     mode: 'development',
@@ -17,6 +19,12 @@ module.exports = {
             filename: 'css/[name].css',
         })
     ],
+    optimization: {
+        splitChunks: {
+            name: 'vendor',
+            chunks: 'all',
+        },
+    },
     module: {
         rules: [
             {
