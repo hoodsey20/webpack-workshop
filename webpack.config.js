@@ -11,8 +11,10 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
     },
+    devServer: {
+        port: 3030,
+    },
     mode: 'development',
-    watch: true,
     devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
