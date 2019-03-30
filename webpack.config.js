@@ -20,6 +20,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'page.html',
+            template: './src/page.html'
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
         })
